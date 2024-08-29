@@ -1,0 +1,4 @@
+Before sort:
+67 78 299 33 1 
+After selection sort:
+1 33 67 78 299 
