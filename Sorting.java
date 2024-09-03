@@ -1,7 +1,7 @@
 
 import java.util.*;
 public class Sorting {
-    static void selection_sort(int arr[], int n) {
+    public static void selection_sort(int arr[], int n) {
         for(int i=0; i<=n-2;i++){
             int min = i;
             for(int j =i; j<= n-1;j++){
@@ -43,6 +43,24 @@ public class Sorting {
         }
         System.out.println();
     }
+
+    public static void insertionSort(int arr[],int n){
+        for(int i=0; i<=n-1;i++){
+            int j = i;
+            while(j>0 && arr[j-1]>arr[j]){
+                int temp = arr[j-1];
+                arr[j-1] = arr[j];
+                arr[j] = temp;
+                j--;
+            }
+        }
+        System.out.println("After Insertion sort:");
+        for (int i = 0; i < n; i++) {
+            System.out.print(arr[i] + " ");
+        }
+        System.out.println();
+
+    }
     public static void main(String args[]) {
 
         int [] arr = new int [50] ; 
@@ -57,7 +75,8 @@ public class Sorting {
         }
         System.out.println();
         //selection_sort(arr, n);
-        bubbleSort(arr, n);
+        //bubbleSort(arr, n);
+        insertionSort(arr, n);
         sc.close();
     }
 }
