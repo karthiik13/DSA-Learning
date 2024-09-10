@@ -11,7 +11,7 @@ public class SortingII {
     }
 
     public static int partition(int [] arr, int low,int high){
-        int pivot = low;
+        int pivot = arr[low];
         int i = low;
         int j = high;
         while(i<j){
@@ -33,7 +33,7 @@ public class SortingII {
         return j;
     }
 
-    public static int quickSort(int [] arr, int n){
+    public static void quickSort(int [] arr, int n){
         qSort(arr,0,n-1);
         System.out.println("After Insertion sort:");
         for (int i = 0; i < n; i++) {
